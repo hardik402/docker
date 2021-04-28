@@ -18,7 +18,7 @@
 
 2. to pull the specific tag of the image from central repository : git pull {image name}:{tag}
 ```
-	docker pull ngix:alpine
+	docker pull nginx:alpine
 ```
 
 3. to list all the image
