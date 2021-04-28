@@ -1,31 +1,76 @@
 # docker
-to pull the latest image from central repository : git pull <image name>
+1. to pull the latest image from central repository : git pull <image name>
+[Source]
+----
 git pull nginx
-to pull the specific tag of the image from central repository : git pull <image name>:<tag>
+----
+2. to pull the specific tag of the image from central repository : git pull <image name>:<tag>
+[Source]
+----
 git pull ngix:alpine
-to list all the image
+----
+3. to list all the image
+[Source]
+----
 docker images
-to run the image : docker run <image name>
+----
+4. to run the image : docker run <image name>
+[Source]
+----
 docker run nginx
-to check all the running containers
+----
+5. to check all the running containers
+[Source]
+----
 docker ps
-to check all the running or non running containers
+----
+6. to check all the running or non running containers
+[Source]
+----
 docker ps -a
-to initialize git 
+----
+7. to initialize git 
+[Source]
+----
 git init
-to pull the git repository
+----
+8. to pull the git repository
+[Source]
+----
 git pull https://github.com/hardik402/docker.git
-to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
+----
+9. to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
+[Source]
+----
 docker build -t app .
-to run the containers 
+----
+10. to run the containers 
+[Source]
+----
 docker run -d -p 8081:8081 app
-to check the running containers
+----
+11. to check the running containers
+[Source]
+----
 docker ps
-to check the logs
+----
+12. to check the logs
+[Source]
+----
 docker logs <containerID or container name>
-to enter inside container 
+----
+13. to enter inside container 
+[Source]
+----
 docker exec -it <containerID> sh
-to stop container
+----
+14. to stop container
+[Source]
+----
 docker stop <containerID>
-to remove container
+----
+15. to remove container
+[Source]
+----
 docker rm <containerID>
+----
