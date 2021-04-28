@@ -35,54 +35,61 @@
 4. to run the image : docker run {image name}
 ```
 	docker run nginx
+	or
+	docker run --network host -d nginx
 ```
 
-5. to check all the running containers
+5 to test container
+```
+	curl localhost
+```
+
+6. to check all the running containers
 ```
 	docker ps
 ```
 
-6. to check all the running or non running containers
+7. to check all the running or non running containers
 ```
 	docker ps -a
 ```
 
-7. to initialize git 
+8. to initialize git 
 ```
 	git init
 ```
 
-8. to pull the git repository
+9. to pull the git repository
 ```
 	git pull https://github.com/hardik402/docker.git
 ```
 
-9. to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
+10. to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
 ```
 	docker build -t app .
 ```
 
-10. to run the containers 
+11. to run the containers 
 ```
 	docker run -d -p 8081:8081 app
 ```
-11. to check the running containers
+12. to check the running containers
 ```
 	docker ps
 ```
-12. to check the logs
+13. to check the logs
 ```
 	docker logs {containerID or container name}
 ```
-13. to enter inside container 
+14. to enter inside container 
 ```
 	docker exec -it {containerID} sh
 ```
-14. to stop container
+15. to stop container
 ```
 	docker stop {containerID}
 ```
-15. to remove container
+16. to remove container
 ```
 	docker rm {containerID}
 ```
