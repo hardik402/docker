@@ -9,7 +9,7 @@
 ```	
 - enter pwd shared by community
 
-### Please append your corp key while creating images/containers
+### Please append your corp key(small case) while creating images/containers
 
 1. to pull the latest image from central repository : git pull {image name}
 ```
@@ -21,14 +21,12 @@
 	docker pull nginx:alpine
 ```
 
-3. to list all the image
+3. to list all the images
 ```
 	docker images
 ```
 4. to run the image : docker run {image name}
 ```
-	docker run nginx
-	or
 	docker run --network host -d nginx
 ```
 
@@ -59,12 +57,12 @@
 
 10. to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
 ```
-	docker build -t app-{corpkey} .
+	docker build -t app-{corpkey in small case} .
 ```
 
 11. to run the containers 
 ```
-	docker run -d -p 8081:8081 app-{corpkey}
+	docker run -d -p 8081:8081 app-{corpkey in small case}
 ```
 12. to check the running containers
 ```
