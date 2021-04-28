@@ -5,7 +5,7 @@
 - open git bash and execute below commnads to connect to VM
 - replace hardik with your username in below commands
 ```
-	ssh hardik@13.95.238.210
+	ssh hardik@ip
 ```	
 - enter pwd shared by community
 
