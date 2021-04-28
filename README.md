@@ -7,14 +7,7 @@
 ```
 	ssh hardik@13.95.238.210
 ```	
-- enter pwd
-- to run docker commands we need sudo privileges so execute below commnads and then exit and connect again
-```
-	sudo usermod -aG docker hardik
-	exit
-	ssh hardik@13.95.238.210
-	
-```
+- enter pwd shared by community
 
 ### Please append your corp key while creating images/containers
 
@@ -66,12 +59,12 @@
 
 10. to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
 ```
-	docker build -t app .
+	docker build -t app-{corpkey} .
 ```
 
 11. to run the containers 
 ```
-	docker run -d -p 8081:8081 app
+	docker run -d -p 8081:8081 app-{corpkey}
 ```
 12. to check the running containers
 ```
