@@ -1,7 +1,7 @@
 # docker
-1. to pull the latest image from central repository : git pull <image name>
+1. to pull the latest image from central repository : git pull {image name}
 
-git pull nginx
+   git pull nginx
 
 2. to pull the specific tag of the image from central repository : git pull <image name>:<tag>
 [Source]
