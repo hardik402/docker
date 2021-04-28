@@ -3,16 +3,16 @@
 ### connect to VM
 
 - open git bash and execute below commnads to connect to VM
-
+- replace hardik with your username in below commands
 ```
-	ssh hardik{username}@13.95.238.210
+	ssh hardik@13.95.238.210
 ```	
 - enter pwd
 - to run docker commands we need sudo privileges so execute below commnads and then exit and connect again
 ```
-	sudo usermod -aG docker hardik{username} 
+	sudo usermod -aG docker hardik
 	exit
-	ssh hardik{username}@13.95.238.210
+	ssh hardik@13.95.238.210
 	
 ```
 
