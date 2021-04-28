@@ -1,4 +1,19 @@
 # docker
+
+### connect to VM
+
+	Open git bash and execute below commnads to connect to VM
+
+```
+	ssh hardik{username}@13.95.238.210
+	enter pwd
+	To run docker commands we need sudo privileges so execute below commnads
+	sudo usermod -aG docker hardik{username} 
+	exit
+	ssh hardik{username}@13.95.238.210
+	
+```
+
 1. to pull the latest image from central repository : git pull {image name}
 ```
 	git pull nginx
