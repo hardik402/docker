@@ -8,8 +8,8 @@ hands on tasks to build and execute a docker image.
   - [Prerequisites](#prerequisites)
   - [Configuring your Git](#configuring-your-git)
   - [Connect to the VM](#connect-to-the-vm)
-  - [Task 1: Executing an image from docker hub](#task-1:-executing-an-image-from-docker-hub)
-  - [Task 2: Building a docker image locally and executing it](#task-2:-building-a-docker-image-locally-and-executing-it)
+  - [Task 1: Executing an image from docker hub](#task-1-executing-an-image-from-docker-hub)
+  - [Task 2: Building a docker image locally and executing it](#task-2-building-a-docker-image-locally-and-executing-it)
 
 ## Prerequisites
 
