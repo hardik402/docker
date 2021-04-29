@@ -6,24 +6,27 @@
   <packaging>jar</packaging>
   
   <!-- include below build tag to your existing pom.xml  --> 
-  <build>
-  <plugins>
-      <plugin> 
-          <!-- Building an executable jar -->
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.0</version>
-          <configuration>
-            <archive>
-              <manifest>
+<build>
+ <plugins>
+     <plugin> 
 
-              <!-- give full qualified name of your main class-->
-                <mainClass>sample.SimpleMain</mainClass>
+                <!-- Building an executable jar -->
 
-              </manifest>
-            </archive>
-          </configuration>
-      </plugin>
-  </plugins>
-  </build>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                  <archive>
+                    <manifest>
+
+                    <!-- give full qualified name of your main class-->
+                      <mainClass>sample.SimpleMain</mainClass>
+
+                    </manifest>
+                  </archive>
+                </configuration>
+    </plugin>
+ </plugins>
+</build>
+  
 </project>
