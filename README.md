@@ -41,6 +41,12 @@ git config --global user.name "Your Name"
 
 // Replace "your_email_id@example.com" with any mail id
 git config --global user.email your_email_id@example.com
+
+/*
+ * Example:
+ * git config --global user.name "John Doe"
+ * git config --global user.email john_doe@email.com 
+ */
 ```
 
 To check if these values are properly set, execute the below command.
@@ -52,11 +58,11 @@ git config --list --show-origin
 ## Connect to the VM
 
 - Open Git bash and execute the below commands to connect to VM.
-- Replace "hardik" with your username in the below command.
 - Virtual machine's IP and password will be shared during the workshop.
 
 ```bash
- ssh hardik@ip
+ ssh <your_username>@IP
+ // example: ssh AR53HV@IP
 ```
 
 - Enter the password shared by community
@@ -102,10 +108,15 @@ execute the below command.
     docker ps
     ```
 
-7. To check for all the running and non running containers
+7. To check for all of your running and non running containers
 
     ```bash
-    docker ps -a
+    docker ps -a | grep <CORPKEY>
+    /*
+     * Example:
+     * docker ps -a | grep ds77bk
+     * This command will display all containers having "ds77bk" string in their names.
+     */
     ```
 
 ## Task 2: Building a docker image locally and executing it
@@ -114,7 +125,7 @@ execute the below command.
 directory.
 
     ```bash
-    git pull https://github.com/hardik402/docker.git
+    git clone https://github.com/hardik402/docker.git
     ```
 
 2. Build the image from the docker file : `docker build -t [repository:tag] [path]`.
@@ -123,6 +134,10 @@ name of the image to make your image unique inside the VM.
 
     ```bash
     docker build -t app-{corpkey in small case} .
+    /*
+     * Example:
+     * docker build -t app-ds77bk .
+     */
     ```
 
 3. Run the container
@@ -130,6 +145,10 @@ name of the image to make your image unique inside the VM.
     ```bash
     // -d flag executes container in detached mode
     docker run -d app-{corpkey in small case}
+    /*
+     * Example:
+     * docker run -d app-ds77bk .
+     */
     ```
 
 4. To check for the running containers
