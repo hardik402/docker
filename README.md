@@ -11,7 +11,31 @@ Please make sure you have the following tools installed on your system before ge
 
 ## Configuring your Git
 
+You can download and install git on windows from the link [here](https://git-scm.com/download/win).
+Once downloaded, install it by executing the setup.
 
+Check via command line if your Git was installed correctly by executing below command.
+
+```bash
+git --version
+```
+
+Now, Git needs to be configured if you haven't configured it.
+Execute the below lines in your terminal to set up Git.
+
+```bash
+// Replace "Your Name" with your name
+git config --global user.name "Your Name"
+
+// Replace "your_email_id@example.com" with any mail id
+git config --global user.email your_email_id@example.com
+```
+
+To check if these values are properly set, execute the below command.
+
+```bash
+git config --list --show-origin
+```
 
 ### Connect to VM
 
