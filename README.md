@@ -1,7 +1,15 @@
 # Docker Workshop
 
 This repository contains the docker workshop to help colleagues get started
-with [docker](https://www.docker.com/).
+with [docker](https://www.docker.com/). In this workshop, we will perform
+hands on tasks to build and execute a docker image.
+
+- [Docker Workshop](#docker-workshop)
+  - [Prerequisites](#prerequisites)
+  - [Configuring your Git](#configuring-your-git)
+  - [Connect to the VM](#connect-to-the-vm)
+  - [Task 1: Executing an image from docker hub](#task-1:-executing-an-image-from-docker-hub)
+  - [Task 2: Building a docker image locally and executing it](#task-2:-building-a-docker-image-locally-and-executing-it)
 
 ## Prerequisites
 
@@ -55,7 +63,7 @@ git config --list --show-origin
 
 > Note: Please append your corp key (small case) while creating images/containers
 
-## Task: Executing an image from docker hub
+## Task 1: Executing an image from docker hub
 
 1. To pull the `latest` tagged image from docker registry, execute the below command.
 
@@ -100,7 +108,7 @@ execute the below command.
     docker ps -a
     ```
 
-## Task: Building a docker image locally and executing it
+## Task 2: Building a docker image locally and executing it
 
 1. Clone this repository by executing the below command and `cd` into the
 directory.
@@ -109,7 +117,7 @@ directory.
     git pull https://github.com/hardik402/docker.git
     ```
 
-2. Build the image from the docker file : docker build -t [repository:tag] [path].
+2. Build the image from the docker file : `docker build -t [repository:tag] [path]`.
 By default, the image tag will be latest. Append your corp-key at the end of the
 name of the image to make your image unique inside the VM.
 
