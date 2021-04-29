@@ -1,86 +1,140 @@
-# docker
+# Docker Workshop
 
-### connect to VM
+This repository contains the docker workshop to help colleagues get started
+with [docker](https://www.docker.com/). In this workshop, we will perform
+hands on tasks to build and execute a docker image.
 
-- open git bash and execute below commnads to connect to VM
-- replace hardik with your username in below commands
-```
-	ssh hardik@ip
-```	
-- enter pwd shared by community
+- [Docker Workshop](#docker-workshop)
+  - [Prerequisites](#prerequisites)
+  - [Connect to the VM](#connect-to-the-vm)
+  - [Task 1: Executing an image from docker hub](#task-1-executing-an-image-from-docker-hub)
+  - [Task 2: Building a docker image locally and executing it](#task-2-building-a-docker-image-locally-and-executing-it)
 
-### Please append your corp key(small case) while creating images/containers
+## Prerequisites
 
-1. to pull the latest image from central repository : git pull {image name}
-```
-	docker pull nginx
-```   
+Please make sure you have the following tools installed on your system before
+getting started.
 
-2. to pull the specific tag of the image from central repository : git pull {image name}:{tag}
-```
-	docker pull nginx:alpine
-```
+- [x] Git
+- [x] Putty (optional)
 
-3. to list all the images
-```
-	docker images
-```
-4. to run the image : docker run {image name}
-```
-	docker run --network host -d nginx
+## Connect to the VM
+
+- Open Git bash and execute the below commands to connect to VM.
+- Virtual machine's IP and password will be shared during the workshop.
+
+```bash
+ ssh <your_username>@IP
+ // example: ssh AR53HV@IP
 ```
 
-5 to test container
-```
-	curl localhost
-```
+- Enter the password shared by community
 
-6. to check all the running containers
-```
-	docker ps
-```
+> Note: Please append your corp key (small case) while creating images/containers
 
-7. to check all the running or non running containers
-```
-	docker ps -a
-```
+## Task 1: Executing an image from docker hub
 
-8. to initialize git 
-```
-	git init
-```
+1. To pull the `latest` tagged image from docker registry, execute the below command.
 
-9. to pull the git repository
-```
-	git pull https://github.com/hardik402/docker.git
-```
+    ```bash
+    docker pull nginx
+    ```
 
-10. to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
-```
-	docker build -t app-{corpkey in small case} .
-```
+2. To pull a specific `tag`(here, "alpine") of the image from docker registry,
+execute the below command.
 
-11. to run the containers 
-```
-	docker run -d -p 8081:8081 app-{corpkey in small case}
-```
-12. to check the running containers
-```
-	docker ps
-```
-13. to check the logs
-```
-	docker logs {containerID or container name}
-```
-14. to enter inside container 
-```
-	docker exec -it {containerID} sh
-```
-15. to stop container
-```
-	docker stop {containerID}
-```
-16. to remove container
-```
-	docker rm {containerID}
-```
+    ```bash
+    docker pull nginx:alpine
+    ```
+
+3. To list all the images existing on the VM, execute the below command.
+
+    ```bash
+    docker images
+    ```
+
+4. To run the image, execute the below command.
+
+    ```bash
+    docker run --network host -d nginx
+    ```
+
+5. To test the executing nginx container, execute the below command.
+
+    ```bash
+    curl localhost
+    ```
+
+6. To check for all the running containers, execute the below command.
+
+    ```bash
+    docker ps
+    ```
+
+7. To check for all of your running and non running containers
+
+    ```bash
+    docker ps -a
+    ```
+
+## Task 2: Building a docker image locally and executing it
+
+1. Clone this repository by executing the below command and `cd` into the
+directory.
+
+    ```bash
+    git clone https://github.com/hardik402/docker.git
+    ```
+
+2. Build the image from the docker file : `docker build -t [repository:tag] [path]`.
+By default, the image tag will be latest. Append your corp-key at the end of the
+name of the image to make your image unique inside the VM.
+
+    ```bash
+    docker build -t app-{corpkey in small case} .
+    /*
+     * Example:
+     * docker build -t app-ds77bk .
+     */
+    ```
+
+3. Run the container
+
+    ```bash
+    // -d flag executes container in detached mode
+    docker run -d app-{corpkey in small case}
+    /*
+     * Example:
+     * docker run -d app-ds77bk .
+     */
+    ```
+
+4. To check for the running containers
+
+    ```bash
+    docker ps
+    ```
+
+5. To check the logs
+
+    ```bash
+    docker logs {containerID or container name}
+    ```
+
+6. To enter inside a container
+
+    ```bash
+    docker exec -it {containerID} sh
+    ```
+
+7. To stop a running container
+
+    ```bash
+    docker stop {containerID}
+    ```
+
+8. To remove a container
+
+    ```bash
+    docker rm {containerID}
+    ```
