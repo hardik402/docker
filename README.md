@@ -1,20 +1,24 @@
 # Docker Workshop
 
-This repository contains the docker workshop to help colleagues get started with [docker](https://www.docker.com/).
+This repository contains the docker workshop to help colleagues get started
+with [docker](https://www.docker.com/).
 
 ## Prerequisites
 
-Please make sure you have the following tools installed on your system before getting started.
+Please make sure you have the following tools installed on your system before
+getting started.
 
 - [x] Git
-- [x] Putty is optional, if you're using a linux machine or have ssh already installed
+- [x] Putty (optional)
 
 ## Configuring your Git
 
-You can download and install git on windows from the link [here](https://git-scm.com/download/win).
-Once downloaded, install it by executing the setup.
+You can download and install git on windows from the link
+[here](https://git-scm.com/download/win).Once downloaded, install it by 
+executing the setup.
 
-Check via command line if your Git was installed correctly by executing below command.
+Check via command line if your Git was installed correctly by executing below
+command.
 
 ```bash
 git --version
@@ -37,68 +41,68 @@ To check if these values are properly set, execute the below command.
 git config --list --show-origin
 ```
 
-### Connect to VM
+## Connect to the VM
 
-- open git bash and execute below commnads to connect to VM
-- replace hardik with your username in below commands
+- Open Git bash and execute the below commands to connect to VM.
+- Replace "hardik" with your username in the below command.
+- Virtual machine's IP and password will be shared during the workshop.
 
 ```bash
  ssh hardik@ip
 ```
 
-- enter pwd shared by community
+- Enter the password shared by community
 
-### Please append your corp key(small case) while creating images/containers
+> Note: Please append your corp key (small case) while creating images/containers
 
-1. to pull the latest image from central repository : git pull {image name}
+## Task: Executing an image from docker hub
 
-```bash
- docker pull nginx
-```
+1. To pull the `latest` tagged image from docker registry, execute the below command.
 
-2. to pull the specific tag of the image from central repository : git pull {image name}:{tag}
+	```bash
+	docker pull nginx
+	```
 
-```bash
- docker pull nginx:alpine
-```
+2. To pull a specific `tag`(here, "alpine") of the image from docker registry,
+execute the below command.
 
-3. to list all the images
+	```bash
+	docker pull nginx:alpine
+	```
 
-```bash
- docker images
-```
+3. To list all the images existing on the VM, execute the below command.
 
-4. to run the image : docker run {image name}
+	```bash
+	docker images
+	```
 
-```bash
- docker run --network host -d nginx
-```
+4. To run the image, execute the below command.
 
-5 to test container
+	```bash
+	docker run --network host -d nginx
+	```
 
-```bash
- curl localhost
-```
+5. To test the executing nginx container, execute the below command.
 
-6. to check all the running containers
+	```bash
+	curl localhost
+	```
 
-```bash
- docker ps
-```
+6. To check for all the running containers, execute the below command.
 
-7. to check all the running or non running containers
+	```bash
+	docker ps
+	```
 
-```bash
- docker ps -a
-```
+7. To check for all the running and non running containers
 
-8. to initialize git
+	```bash
+	docker ps -a
+	```
 
-```bash
- git init
-```
+## Task: Building a docker image locally and executing it
 
-9. to pull the git repository
+9. To pull the git repository
 
 ```bash
  git pull https://github.com/hardik402/docker.git
