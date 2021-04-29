@@ -102,50 +102,54 @@ execute the below command.
 
 ## Task: Building a docker image locally and executing it
 
-9. To pull the git repository
+1. Clone this repository by executing the below command and `cd` into the
+directory.
 
-```bash
- git pull https://github.com/hardik402/docker.git
-```
+	```bash
+	git pull https://github.com/hardik402/docker.git
+	```
 
-10. to build the image from the docker file : docker build -t [repository:tag] [path]. by default the tag will be latest
+2. Build the image from the docker file : docker build -t [repository:tag] [path].
+By default, the image tag will be latest. Append your corp-key at the end of the
+name of the image to make your image unique inside the VM.
 
-```bash
- docker build -t app-{corpkey in small case} .
-```
+	```bash
+	docker build -t app-{corpkey in small case} .
+	```
 
-11. to run the containers
+3. Run the container
 
-```bash
- docker run -d -p 8081:8081 app-{corpkey in small case}
-```
+	```bash
+	// -d flag executes container in detached mode
+	docker run -d app-{corpkey in small case}
+	```
 
-12. to check the running containers
+4. To check for the running containers
 
-```bash
- docker ps
-```
+	```bash
+	docker ps
+	```
 
-13. to check the logs
+5. To check the logs
 
-```bash
- docker logs {containerID or container name}
-```
+	```bash
+	docker logs {containerID or container name}
+	```
 
-14. to enter inside container
+6. To enter inside a container
 
-```bash
- docker exec -it {containerID} sh
-```
+	```bash
+	docker exec -it {containerID} sh
+	```
 
-15. to stop container
+7. To stop a running container
 
-```bash
- docker stop {containerID}
-```
+	```bash
+	docker stop {containerID}
+	```
 
-16. to remove container
+8. To remove a container
 
-```bash
- docker rm {containerID}
-```
+	```bash
+	docker rm {containerID}
+	```
