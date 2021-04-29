@@ -6,7 +6,6 @@ hands on tasks to build and execute a docker image.
 
 - [Docker Workshop](#docker-workshop)
   - [Prerequisites](#prerequisites)
-  - [Configuring your Git](#configuring-your-git)
   - [Connect to the VM](#connect-to-the-vm)
   - [Task 1: Executing an image from docker hub](#task-1-executing-an-image-from-docker-hub)
   - [Task 2: Building a docker image locally and executing it](#task-2-building-a-docker-image-locally-and-executing-it)
@@ -18,19 +17,6 @@ getting started.
 
 - [x] Git
 - [x] Putty (optional)
-
-## Configuring your Git
-
-You can download and install git on windows from the link
-[here](https://git-scm.com/download/win).Once downloaded, install it by 
-executing the setup.
-
-Check via command line if your Git was installed correctly by executing below
-command.
-
-```bash
-git --version
-```
 
 ## Connect to the VM
 
