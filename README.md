@@ -32,29 +32,6 @@ command.
 git --version
 ```
 
-Now, Git needs to be configured if you haven't configured it.
-Execute the below lines in your terminal to set up Git.
-
-```bash
-// Replace "Your Name" with your name
-git config --global user.name "Your Name"
-
-// Replace "your_email_id@example.com" with any mail id
-git config --global user.email your_email_id@example.com
-
-/*
- * Example:
- * git config --global user.name "John Doe"
- * git config --global user.email john_doe@email.com 
- */
-```
-
-To check if these values are properly set, execute the below command.
-
-```bash
-git config --list --show-origin
-```
-
 ## Connect to the VM
 
 - Open Git bash and execute the below commands to connect to VM.
@@ -111,12 +88,7 @@ execute the below command.
 7. To check for all of your running and non running containers
 
     ```bash
-    docker ps -a | grep <CORPKEY>
-    /*
-     * Example:
-     * docker ps -a | grep ds77bk
-     * This command will display all containers having "ds77bk" string in their names.
-     */
+    docker ps -a
     ```
 
 ## Task 2: Building a docker image locally and executing it
