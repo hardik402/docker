@@ -105,7 +105,8 @@ name of the image to make your image unique inside the VM.
     docker run app-{corpkey in small case}
     /*
      * Example:
-     * docker run -d app-ds77bk .
+     * docker run app-ds77bk
+     * docker run -d app-ds77bk
      */
     ```
 
