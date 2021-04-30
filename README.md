@@ -102,7 +102,7 @@ name of the image to make your image unique inside the VM.
 
     ```bash
     // -d flag executes container in detached mode
-    docker run -d app-{corpkey in small case}
+    docker run app-{corpkey in small case}
     /*
      * Example:
      * docker run -d app-ds77bk .
